@@ -27,6 +27,23 @@
         <module>web</module>
     </modules>
 
+    <dependencyManagement>
+        <dependencies>
+            <!-- Example dependencies, replace with your actual ones -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -65,6 +82,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
+                <version>${findbugs.version}</version>
                 <configuration>
                     <effort>Max</effort>
                     <threshold>Low</threshold>
@@ -74,6 +92,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
+                <version>${pmd.version}</version>
                 <reportSets>
                     <reportSet>
                         <reports>
@@ -86,6 +105,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${checkstyle.version}</version>
             </plugin>
         </plugins>
     </reporting>
